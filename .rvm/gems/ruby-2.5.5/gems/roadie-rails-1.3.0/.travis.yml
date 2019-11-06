@@ -1,0 +1,20 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.2
+  - 2.3
+  - 2.4
+
+matrix:
+  fast_finish: true
+
+cache:
+  directories:
+  - .bundle
+  - spec/railsapps/rails_42/.bundle
+  - spec/railsapps/rails_42_sprockets_rails_3/.bundle
+  - spec/railsapps/rails_50/.bundle
+  - spec/railsapps/rails_51/.bundle
+  - spec/railsapps/rails_52/.bundle
+bundler_args: --without guard --path=.bundle
+script: "rake"

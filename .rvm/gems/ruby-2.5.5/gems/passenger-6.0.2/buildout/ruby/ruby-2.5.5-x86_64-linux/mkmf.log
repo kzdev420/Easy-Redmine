@@ -1,0 +1,170 @@
+have_header: checking for alloca.h... -------------------- yes
+
+"gcc -o conftest -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g conftest.c  -L. -L/home/sa/.rvm/rubies/ruby-2.5.5/lib -Wl,-rpath,/home/sa/.rvm/rubies/ruby-2.5.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <alloca.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/version.h... -------------------- yes
+
+"gcc -E -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/version.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/io.h... -------------------- yes
+
+"gcc -E -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/io.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- yes
+
+"gcc -E -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_var: checking for ruby_version... -------------------- no
+
+"gcc -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g   -c conftest.c"
+conftest.c: In function ‘t’:
+conftest.c:13:55: error: ‘ruby_version’ undeclared (first use in this function); did you mean ‘ruby_verbose’?
+ int t(void) { const volatile void *volatile p; p = &(&ruby_version)[0]; return !p; }
+                                                       ^~~~~~~~~~~~
+                                                       ruby_verbose
+conftest.c:13:55: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { const volatile void *volatile p; p = &(&ruby_version)[0]; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_io_blocking_region() in ruby/io.h... -------------------- yes
+
+"gcc -o conftest -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g conftest.c  -L. -L/home/sa/.rvm/rubies/ruby-2.5.5/lib -Wl,-rpath,/home/sa/.rvm/rubies/ruby-2.5.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:57: error: ‘rb_thread_io_blocking_region’ undeclared (first use in this function); did you mean ‘rb_thread_local_aref’?
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_io_blocking_region; return !p; }
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                         rb_thread_local_aref
+conftest.c:15:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/io.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_io_blocking_region; return !p; }
+/* end */
+
+"gcc -o conftest -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g conftest.c  -L. -L/home/sa/.rvm/rubies/ruby-2.5.5/lib -Wl,-rpath,/home/sa/.rvm/rubies/ruby-2.5.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/io.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: extern void rb_thread_io_blocking_region();
+16: int t(void) { rb_thread_io_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl() in ruby/thread.h... -------------------- yes
+
+"gcc -o conftest -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/x86_64-linux -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0/ruby/backward -I/home/sa/.rvm/rubies/ruby-2.5.5/include/ruby-2.5.0 -I/home/sa/.rvm/gems/ruby-2.5.5/gems/passenger-6.0.2/src/ruby_native_extension    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC -g conftest.c  -L. -L/home/sa/.rvm/rubies/ruby-2.5.5/lib -Wl,-rpath,/home/sa/.rvm/rubies/ruby-2.5.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/thread.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+/* end */
+
+--------------------
+

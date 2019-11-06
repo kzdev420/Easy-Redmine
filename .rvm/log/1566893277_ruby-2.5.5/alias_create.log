@@ -1,0 +1,50 @@
+[2019-08-27 08:07:57] alias_create_execute
+alias_create_execute () 
+{ 
+    for _path in "$rvm_rubies_path" "$rvm_gems_path" "$rvm_environments_path" "$rvm_wrappers_path";
+    do
+        if [[ -L "$_path/$alias_name" ]]; then
+            \command \rm -fv "$_path/$alias_name" || return $?;
+        fi;
+        \command \ln -fs "$_path/$rvm_ruby_string" "$_path/$alias_name" || return $?;
+    done;
+    __rvm_db_ "$rvm_path/config/alias" "$alias_name" "$rvm_ruby_string"
+}
+current path: /home/sa
+GEM_HOME=/home/sa/.rvm/gems/ruby-2.5.5
+GEM_PATH=/home/sa/.rvm/gems/ruby-2.5.5:/home/sa/.rvm/gems/ruby-2.5.5@global
+PATH=/home/sa/.rvm/gems/ruby-2.5.5/bin:/home/sa/.rvm/gems/ruby-2.5.5@global/bin:/home/sa/.rvm/rubies/ruby-2.5.5/bin:/home/sa/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+command(1): alias_create_execute
++ for _path in "$rvm_rubies_path" "$rvm_gems_path" "$rvm_environments_path" "$rvm_wrappers_path"
++ [[ -L /home/sa/.rvm/rubies/default ]]
++ command ln -fs /home/sa/.rvm/rubies/ruby-2.5.5 /home/sa/.rvm/rubies/default
++ ln -fs /home/sa/.rvm/rubies/ruby-2.5.5 /home/sa/.rvm/rubies/default
++ for _path in "$rvm_rubies_path" "$rvm_gems_path" "$rvm_environments_path" "$rvm_wrappers_path"
++ [[ -L /home/sa/.rvm/gems/default ]]
++ command ln -fs /home/sa/.rvm/gems/ruby-2.5.5 /home/sa/.rvm/gems/default
++ ln -fs /home/sa/.rvm/gems/ruby-2.5.5 /home/sa/.rvm/gems/default
++ for _path in "$rvm_rubies_path" "$rvm_gems_path" "$rvm_environments_path" "$rvm_wrappers_path"
++ [[ -L /home/sa/.rvm/environments/default ]]
++ command ln -fs /home/sa/.rvm/environments/ruby-2.5.5 /home/sa/.rvm/environments/default
++ ln -fs /home/sa/.rvm/environments/ruby-2.5.5 /home/sa/.rvm/environments/default
++ for _path in "$rvm_rubies_path" "$rvm_gems_path" "$rvm_environments_path" "$rvm_wrappers_path"
++ [[ -L /home/sa/.rvm/wrappers/default ]]
++ command ln -fs /home/sa/.rvm/wrappers/ruby-2.5.5 /home/sa/.rvm/wrappers/default
++ ln -fs /home/sa/.rvm/wrappers/ruby-2.5.5 /home/sa/.rvm/wrappers/default
++ __rvm_db_ /home/sa/.rvm/config/alias default ruby-2.5.5
++ typeset __db __key __value
++ __db=/home/sa/.rvm/config/alias
++ __key=default
++ shift 2
++ __value=ruby-2.5.5
++ case "${__value}" in
++ __rvm_db_add /home/sa/.rvm/config/alias default ruby-2.5.5
++ typeset __dir=/home/sa/.rvm/config
++ [[ -f /home/sa/.rvm/config/alias ]]
++ __rvm_db_remove /home/sa/.rvm/config/alias default
++ [[ -f /home/sa/.rvm/config/alias ]]
++ __rvm_sed -e '\#^default=# d' -e '/^$/d' /home/sa/.rvm/config/alias
++ sed -e '\#^default=# d' -e '/^$/d' /home/sa/.rvm/config/alias
++ command mv -f /home/sa/.rvm/config/alias.new /home/sa/.rvm/config/alias
++ mv -f /home/sa/.rvm/config/alias.new /home/sa/.rvm/config/alias
++ printf '%b=%b\n' default ruby-2.5.5

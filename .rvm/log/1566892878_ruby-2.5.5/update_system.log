@@ -1,0 +1,58 @@
+[2019-08-27 08:01:18] requirements_debian_update_system
+requirements_debian_update_system () 
+{ 
+    __rvm_try_sudo apt-get --quiet --yes update || { 
+        \typeset __ret=$?;
+        case ${__ret} in 
+            100)
+                rvm_error "There has been an error while updating your system using \`apt-get\`.
+It seems that there are some 404 Not Found errors for repositories listed in:
+
+    /etc/apt/sources.list
+    /etc/apt/sources.list.d/*.list
+
+Make sure that all repositories are available from your system and verify your setup by running manually:
+
+    sudo apt-get update
+
+Make sure that it works correctly before proceeding with RVM.
+
+If you are working from the GUI instead of the terminal, you might want to verify and fix broken
+repositories using \"Software & Updates\" application.
+"
+            ;;
+        esac;
+        return ${__ret}
+    }
+}
+current path: /home/sa
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sa/.rvm/bin
+command(2): requirements_debian_update_system ruby-2.5.5
+++ __rvm_try_sudo apt-get --quiet --yes update
+++ typeset -a command_to_run
+++ typeset sudo_path sbin_path missing_paths
+++ command_to_run=("$@")
+++ ((  UID == 0  ))
+++ case "$rvm_autolibs_flag_number" in
+++ is_a_function __rvm_sudo
+++ typeset -f __rvm_sudo
+++ missing_paths=
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sa/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sa/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/local/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sa/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ [[ -n '' ]]
+++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ command sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+Hit:1 http://hk.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://hk.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://hk.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 http://hk.archive.ubuntu.com/ubuntu bionic-security InRelease
+Reading package lists...

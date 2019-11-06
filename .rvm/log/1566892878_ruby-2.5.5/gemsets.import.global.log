@@ -1,0 +1,351 @@
+[2019-08-27 08:07:54] gemset_import_list
+gemset_import_list () 
+{ 
+    case "${rvm_ruby_string}" in 
+        *jruby*)
+            \command \gem install "$@"
+        ;;
+        *)
+            \typeset line;
+            for line in "$@";
+            do
+                gem_install $line || rvm_error "there was an error installing gem $line";
+            done
+        ;;
+    esac
+}
+current path: /home/sa
+GEM_HOME=/home/sa/.rvm/gems/ruby-2.5.5@global
+GEM_PATH=/home/sa/.rvm/gems/ruby-2.5.5@global
+PATH=/home/sa/.rvm/gems/ruby-2.5.5@global/bin:/home/sa/.rvm/rubies/ruby-2.5.5/bin:/home/sa/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+command(6): gemset_import_list gem-wrappers rubygems-bundler rake rvm bundler
++ case "${rvm_ruby_string}" in
++ typeset line
++ for line in "$@"
++ gem_install gem-wrappers
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args gem-wrappers
++ typeset gem=gem-wrappers
++ __rvm_string_match gem-wrappers '*.gem$'
++ typeset _string
++ _string=gem-wrappers
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=gem-wrappers
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_gem-wrappers_version gem_version
++ typeset value key variable
++ key=gem_gem-wrappers_version
++ variable=gem_version
++ value=
++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_db_ /home/sa/.rvm/user/db gem_gem-wrappers_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/user/db
+++ __key=gem_gem-wrappers_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/user/db gem_gem-wrappers_version
+++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_db_ /home/sa/.rvm/config/db gem_gem-wrappers_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/config/db
+++ __key=gem_gem-wrappers_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/config/db gem_gem-wrappers_version
+++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++ value='>=1.4.0'
++ [[ -n >=1.4.0 ]]
++ [[ -n gem_version ]]
++ eval 'gem_version='\''>=1.4.0'\'''
+++ gem_version='>=1.4.0'
++ true
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''gem-wrappers'\'''
++ [[ -n >=1.4.0 ]]
++ gem_spec+=', '\''>=1.4.0'\'''
++ version_check=1.4.0
++ __rvm_ls -ld /home/sa/.rvm/gems/ruby-2.5.5@global/gems/gem-wrappers-1.4.0
++ rvm_log 'gem gem-wrappers >=1.4.0 is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem gem-wrappers >=1.4.0 is already installed\n'
+gem gem-wrappers >=1.4.0 is already installed
++ return 0
++ for line in "$@"
++ gem_install rubygems-bundler
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args rubygems-bundler
++ typeset gem=rubygems-bundler
++ __rvm_string_match rubygems-bundler '*.gem$'
++ typeset _string
++ _string=rubygems-bundler
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=rubygems-bundler
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_rubygems-bundler_version gem_version
++ typeset value key variable
++ key=gem_rubygems-bundler_version
++ variable=gem_version
++ value=
++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_db_ /home/sa/.rvm/user/db gem_rubygems-bundler_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/user/db
+++ __key=gem_rubygems-bundler_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/user/db gem_rubygems-bundler_version
+++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_db_ /home/sa/.rvm/config/db gem_rubygems-bundler_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/config/db
+++ __key=gem_rubygems-bundler_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/config/db gem_rubygems-bundler_version
+++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -n '' ]]
++ return 1
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''rubygems-bundler'\'''
++ [[ -n '' ]]
++ version_check='*([[:digit:]\.])'
++ __rvm_ls -ld /home/sa/.rvm/gems/ruby-2.5.5@global/gems/rubygems-bundler-1.4.5
++ rvm_log 'gem rubygems-bundler  is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem rubygems-bundler  is already installed\n'
+gem rubygems-bundler  is already installed
++ return 0
++ for line in "$@"
++ gem_install rake
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args rake
++ typeset gem=rake
++ __rvm_string_match rake '*.gem$'
++ typeset _string
++ _string=rake
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=rake
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_rake_version gem_version
++ typeset value key variable
++ key=gem_rake_version
++ variable=gem_version
++ value=
++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_db_ /home/sa/.rvm/user/db gem_rake_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/user/db
+++ __key=gem_rake_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/user/db gem_rake_version
+++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_db_ /home/sa/.rvm/config/db gem_rake_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/config/db
+++ __key=gem_rake_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/config/db gem_rake_version
+++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -n '' ]]
++ return 1
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''rake'\'''
++ [[ -n '' ]]
++ version_check='*([[:digit:]\.])'
++ __rvm_ls -ld /home/sa/.rvm/gems/ruby-2.5.5@global/gems/rake-12.3.0
++ rvm_log 'gem rake  is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem rake  is already installed\n'
+gem rake  is already installed
++ return 0
++ for line in "$@"
++ gem_install rvm
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args rvm
++ typeset gem=rvm
++ __rvm_string_match rvm '*.gem$'
++ typeset _string
++ _string=rvm
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=rvm
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_rvm_version gem_version
++ typeset value key variable
++ key=gem_rvm_version
++ variable=gem_version
++ value=
++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_db_ /home/sa/.rvm/user/db gem_rvm_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/user/db
+++ __key=gem_rvm_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/user/db gem_rvm_version
+++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_db_ /home/sa/.rvm/config/db gem_rvm_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/config/db
+++ __key=gem_rvm_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/config/db gem_rvm_version
+++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++ value='>=1.11.3.9'
++ [[ -n >=1.11.3.9 ]]
++ [[ -n gem_version ]]
++ eval 'gem_version='\''>=1.11.3.9'\'''
+++ gem_version='>=1.11.3.9'
++ true
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''rvm'\'''
++ [[ -n >=1.11.3.9 ]]
++ gem_spec+=', '\''>=1.11.3.9'\'''
++ version_check=1.11.3.9
++ __rvm_ls -ld /home/sa/.rvm/gems/ruby-2.5.5@global/gems/rvm-1.11.3.9
++ rvm_log 'gem rvm >=1.11.3.9 is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem rvm >=1.11.3.9 is already installed\n'
+gem rvm >=1.11.3.9 is already installed
++ return 0
++ for line in "$@"
++ gem_install bundler
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args bundler
++ typeset gem=bundler
++ __rvm_string_match bundler '*.gem$'
++ typeset _string
++ _string=bundler
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=bundler
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_bundler_version gem_version
++ typeset value key variable
++ key=gem_bundler_version
++ variable=gem_version
++ value=
++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_db_ /home/sa/.rvm/user/db gem_bundler_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/user/db
+++ __key=gem_bundler_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/user/db gem_bundler_version
+++ [[ -f /home/sa/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_db_ /home/sa/.rvm/config/db gem_bundler_version
+++ typeset __db __key __value
+++ __db=/home/sa/.rvm/config/db
+++ __key=gem_bundler_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sa/.rvm/config/db gem_bundler_version
+++ [[ -f /home/sa/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -n '' ]]
++ return 1
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''bundler'\'''
++ [[ -n '' ]]
++ version_check='*([[:digit:]\.])'
++ __rvm_ls -ld /home/sa/.rvm/gems/ruby-2.5.5@global/gems/bundler-1.16.6
++ rvm_log 'gem bundler  is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem bundler  is already installed\n'
+gem bundler  is already installed
++ return 0
